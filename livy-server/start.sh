@@ -16,6 +16,7 @@ cd /spark/bin && /spark/sbin/../bin/spark-class org.apache.spark.deploy.master.M
 echo "Starting the livy server"
 
 echo "livy.spark.master = spark://spark-master:7077" > /livy/apache-livy-0.6.0-incubating-bin/conf/livy.conf
+echo "livy.file.local-dir-whitelist = /usr/local/data/jar/" >> /livy/apache-livy-0.6.0-incubating-bin/conf/livy.conf
 
 /livy/apache-livy-0.6.0-incubating-bin/bin/livy-server start &
 
